@@ -1,0 +1,29 @@
+# Material de cliente: nunca versionar.
+# Fotos, logos e formulários preenchidos contêm dados pessoais e obras
+# de terceiros. Só o exemplo fica no repositório.
+clientes/*
+!clientes/exemplo-cafeteria/
+!clientes/exemplo-cafeteria/briefing.md
+
+# Acessos e segredos
+.env
+.env.*
+*.pem
+*.key
+credenciais*
+acessos*
+
+# Node
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
