@@ -12,6 +12,38 @@ significa não entregue.
 - [ ] Ano do rodapé é o ano corrente
 - [ ] Textos em português do Brasil, sem erro de digitação
 
+## Cara de IA
+
+Os tells completos estão em `referencias/direcoes-visuais.md`. Reprove
+qualquer um que o briefing não tenha pedido.
+
+- [ ] Nenhuma palavra isolada do título em cor, itálico ou negrito
+- [ ] Nenhum rótulo em CAIXA ALTA com espaçamento alargado sobre seções
+- [ ] Nenhum `01 / 02 / 03` em conteúdo que não é sequência
+- [ ] Nenhum `→` colado no texto de link ou botão
+- [ ] Nenhum metadado juntado por ponto médio (`A · B · C`)
+- [ ] Nenhuma monoespaçada em rótulo pequeno de dado
+- [ ] Nenhum gradiente usado como decoração
+- [ ] Raio e sombra variam conforme a hierarquia; não é o mesmo valor em
+      todos os elementos
+- [ ] Nenhuma entrada com fade e subida por seção no scroll
+- [ ] Nenhum emoji como ícone
+- [ ] No máximo duas famílias tipográficas
+- [ ] Nenhum adjetivo sem fato na cópia ("qualidade e tradição")
+- [ ] Combinação creme quente + serifada de alto contraste + terracota
+      só se o briefing pediu
+- [ ] `DIRECAO.txt` existe e a página corresponde à direção declarada
+
+## Página sem fotos
+
+Só se o briefing disse que não haverá fotos.
+
+- [ ] Nenhum retângulo cinza, moldura vazia ou `[foto: ...]` sobrando
+- [ ] O hero tem um recurso visual próprio, não só título e botão
+- [ ] Medida de texto entre 60 e 70 caracteres
+- [ ] Nenhuma foto ou ilustração de banco sem autorização no briefing
+- [ ] `ENTREGA.md` não lista foto como pendência
+
 ## Links e contato
 
 - [ ] Link do WhatsApp abre no número certo, só dígitos, com 55

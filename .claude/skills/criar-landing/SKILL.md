@@ -37,13 +37,49 @@ detalhe não interrompe.
 
 ## Fase 2 — Briefing → página
 
-1. Leia `referencias/direcoes-visuais.md` e escolha **uma** direção pelo
-   ramo do cliente. Grave o nome dela em `clientes/<cliente>/DIRECAO.txt`
-   e declare em uma linha no chat.
-2. Otimize as imagens de `assets/` para `site/img/`: WebP, máximo
+### 2.1 Decida o estado das fotos
+
+Antes de qualquer coisa, classifique (detalhes em
+`referencias/sem-fotos.md`):
+
+- **vai ter foto** — arquivos em `assets/`
+- **foto vem depois** — o cliente disse que envia; use bloco rotulado
+  `[foto: descrição]` nas medidas finais
+- **não vai ter foto** — o cliente marcou que não quer, ou não tem e não
+  vai ter
+
+No terceiro caso, **leia `referencias/sem-fotos.md`** e desenhe uma
+página que não pede imagem: tipografia como elemento gráfico, campos de
+cor, desenho em SVG próprio, cardápio ou tabela como protagonista. Nenhum
+retângulo cinza, nenhum espaço reservado, nenhuma foto de banco sem
+autorização escrita. A página está completa e o `ENTREGA.md` não lista
+foto como pendência.
+
+### 2.2 Direção visual, em dois passos
+
+1. Leia `referencias/direcoes-visuais.md`, inclusive a seção **Tells de
+   IA**, e escolha **uma** direção pelo ramo. Confira os `DIRECAO.txt`
+   existentes com `Grep` para não repetir a direção em outro cliente do
+   mesmo ramo.
+2. **Invoque a skill `frontend-design`** e siga o processo dela.
+3. Escreva um plano curto (nas suas linhas de trabalho, não no chat e
+   não em arquivo): paleta de 4 a 6 hex nomeados, as tipografias e seus
+   papéis, o conceito de layout em uma frase, e o que será o elemento
+   memorável da página.
+4. Revise o plano contra o briefing: se alguma parte dele é o que você
+   produziria para qualquer negócio do mesmo ramo, troque essa parte.
+   Gaste a ousadia em um lugar só e mantenha o resto disciplinado.
+5. Grave a direção em `clientes/<cliente>/DIRECAO.txt` e declare em uma
+   linha no chat.
+
+### 2.3 Construa
+
+1. Se houver fotos, otimize `assets/` para `site/img/`: WebP, máximo
    1600 px de largura, qualidade 80. Um comando, não um script.
-3. Escreva `clientes/<cliente>/site/index.html` **de uma vez**, completo.
+2. Escreva `clientes/<cliente>/site/index.html` **de uma vez**, completo.
    CSS em `<style>` no `<head>`. Sem framework, sem CDN, sem build.
+3. Atenção à especificidade dos seletores: classes de seção e de
+   elemento se anulam com facilidade em `padding` e `margin`.
 
 ### Seções, na ordem (só as marcadas no briefing)
 
@@ -79,8 +115,11 @@ horários.
 
 - Inventar depoimento, preço, nota, nº de clientes, tempo de mercado,
   prêmio ou fornecedor. Sem dado → `[preencher: <campo>]` visível.
-- Inventar imagem. Sem foto → bloco de cor da paleta com o rótulo
-  `[foto: descrição]`.
+- Inventar imagem, ou usar banco de imagens sem autorização escrita no
+  briefing. Foto que vem depois → bloco rotulado `[foto: descrição]`;
+  cliente que não quer foto → página desenhada sem imagem (2.1).
+- Qualquer tell da seção **Tells de IA** de `direcoes-visuais.md` que o
+  briefing não tenha pedido.
 - Analytics, pixel, cookie ou formulário que o briefing não marcou.
 - Escrever backend. Formulário autorizado vai para serviço externo
   (Formspree, Google Forms, Netlify Forms) com `<label>`, `required` e

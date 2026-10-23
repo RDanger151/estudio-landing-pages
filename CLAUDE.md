@@ -54,8 +54,10 @@ com duplo clique e subir a pasta em qualquer hospedagem estática.
 1. **Nunca inventar conteúdo.** Dado ausente vira `[preencher: campo]`.
    Proibido criar depoimento, preço, nota, nº de clientes, anos de
    mercado, prêmio ou fornecedor.
-2. **Nunca inventar imagem.** Sem foto, bloco de cor com rótulo
-   `[foto: descrição]`.
+2. **Nunca inventar imagem.** Foto que vem depois: bloco rotulado
+   `[foto: descrição]`. Cliente que não quer foto: página desenhada sem
+   imagem, por `referencias/sem-fotos.md`, sem retângulo cinza. Banco de
+   imagens só com autorização escrita no briefing.
 3. **Nada de rastreamento por padrão.** Analytics, pixel e cookies só se
    o briefing marcou; nesse caso a página ganha `privacidade.html` e
    aviso de cookies com aceite.
@@ -67,6 +69,9 @@ com duplo clique e subir a pasta em qualquer hospedagem estática.
    `DIRECAO.txt`. Repetir layout entre clientes é defeito.
 7. **Quem constrói não revisa.** A aprovação final é do subagente
    `revisor-landing`.
+8. **Nada com cara de IA.** A skill `frontend-design` é invocada antes de
+   escrever CSS, e os tells listados em `referencias/direcoes-visuais.md`
+   são proibidos a menos que o briefing os peça.
 
 ## Economia de contexto
 

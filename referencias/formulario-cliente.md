@@ -110,10 +110,16 @@ Só entram depoimentos reais, com autorização de quem escreveu. Se não tiver,
 
 ### Fotos
 
-Fotos reais são a maior diferença entre uma página genérica e uma que vende. Precisamos de:
+Primeiro, decida: a página vai ter fotos?
+
+- [ ] **Vou enviar fotos** — marque abaixo o que vai mandar
+- [ ] **Envio depois** — a página fica com os espaços marcados até chegarem
+- [ ] **Não vou usar fotos** — a página é desenhada sem imagem, com tipografia, cor e um desenho próprio. Fica completa assim, não é uma versão reduzida
+
+Se for enviar, fotos reais são a maior diferença entre uma página genérica e uma que vende. O ideal é:
 
 - [ ] 1 foto horizontal do ambiente, boa o bastante para o topo da página
-- [ ] 3 a 6 fotos dos produtos ou servicos
+- [ ] 3 a 6 fotos dos produtos ou serviços
 - [ ] 1 foto da equipe ou do responsável (opcional, mas ajuda)
 - [ ] Logo em arquivo separado
 

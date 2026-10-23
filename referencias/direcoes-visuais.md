@@ -1,100 +1,151 @@
 # Direções visuais
 
-Seis direções prontas. O agente escolhe **uma** por cliente, declara em
-uma linha qual escolheu e segue os valores. Nunca misturar duas.
+Seis direções. O agente escolhe **uma** por cliente, declara qual em uma
+linha e registra em `clientes/<cliente>/DIRECAO.txt`. Nunca misturar
+duas.
 
-Se o briefing trouxe cores ou fontes da marca, elas substituem a paleta
-e a tipografia da direção; o resto (ritmo, forma, composição) continua.
+Estas direções são ponto de partida, não gabarito. Cada uma traz uma
+**ideia estrutural** além da paleta — é a estrutura que diferencia as
+páginas, não a cor. Se o briefing trouxe cores, fontes ou referências da
+marca, elas substituem a paleta e a tipografia; a ideia estrutural
+continua.
 
-Registre em `clientes/<cliente>/DIRECAO.txt` qual foi usada, para não
-repetir a mesma em clientes do mesmo ramo na mesma cidade.
+Antes de escrever CSS, leia a seção **Tells de IA** no fim deste arquivo
+e invoque a skill `frontend-design`.
 
 ---
 
-## 1. Artesanal
+## 1. Ofício
 
-Para cafeteria, padaria, cervejaria, brechó, floricultura, tatuagem.
+Para padaria, cafeteria, cervejaria, marcenaria, floricultura.
 
-- Fundo `#FBF7F0`, texto `#2B2118`, acento `#9C5B2C`, apoio `#E3D5C0`
-- Display: Fraunces ou Bitter · Corpo: DM Sans
-- Raio 20 px, sem sombra, divisores de 1 px em tom terroso
-- Espaçamento generoso (seções de 96 px), títulos grandes em serifada
-- Composição assimétrica: texto à esquerda, imagem em círculo ou arco
-- Marca registrada: um elemento desenhado em SVG com traço
+- Ground `#2F3822` (oliva profundo), texto `#EDEAD9`, acentos
+  `#C8A531` (mostarda) e `#8C9B6E` (verde seco)
+- Display: Bricolage Grotesque ou Instrument Serif · Corpo: Inter
+- Raios diferentes por função: 0 em faixas, 999 px em botões
+- **Estrutura:** faixas horizontais de alturas desiguais, cada uma de
+  uma cor da paleta. Cardápio ou lista de produtos como ledger: item à
+  esquerda, régua pontilhada, preço à direita
+- Sem sombra em nenhum elemento
 
-## 2. Minimalista clínico
+## 2. Ficha técnica
 
 Para clínica, dentista, advocacia, contabilidade, laboratório.
 
-- Fundo `#FFFFFF`, texto `#111827`, acento `#1D4ED8`, apoio `#F3F4F6`
-- Display e corpo: Inter (pesos 600 e 400)
-- Raio 8 px, borda de 1 px `#E5E7EB`, sombra só em elemento flutuante
-- Grade de 12 colunas, alinhamento à esquerda, muito espaço em branco
-- Nada de curva decorativa; a hierarquia vem só do tamanho do texto
-- Marca registrada: números grandes para dados objetivos
+- Ground `#FFFFFF`, texto `#15202B`, acento `#1F4E79`, apoio `#DDE4EA`
+- Display e corpo: Public Sans (ou Source Sans 3), pesos 600 e 400
+- Raio 0 em tudo; separação por régua de 1 px `#C9D3DB`
+- **Estrutura:** duas colunas assimétricas (38% / 62%), rótulo à
+  esquerda e conteúdo à direita, como uma ficha. Serviços em tabela de
+  verdade, não em cards. Nenhum card na página
+- Sem sombra, sem ícone decorativo
 
-## 3. Noturno premium
+## 3. Vitrine noturna
 
-Para barbearia masculina, academia, estúdio de som, bar, car detailing.
+Para barbearia, academia, estúdio, bar, estética automotiva.
 
-- Fundo `#0F0F11`, texto `#F4F4F5`, acento `#C8A24A`, apoio `#1C1C20`
-- Display: Oswald ou Archivo (maiúsculas, espaçamento alargado)
-- Corpo: Inter
-- Raio 4 px, bordas de 1 px em `#2A2A30`
-- Fotos grandes com camada escura por cima para contraste do texto
-- Marca registrada: títulos em maiúsculas com linha fina abaixo
-- Cuidado: texto corpo nunca abaixo de `#A1A1AA` sobre o fundo escuro
+- Ground `#1A2432` (azul-ardósia escuro), texto `#E8E6E1`, acentos
+  `#B08A4A` (latão) e `#C97E6D` (rosa queimado)
+- Display: Anton ou Archivo Expanded · Corpo: Karla
+- Raio 2 px; bordas `#2C3A4C`
+- **Estrutura:** título sangrando nas duas margens no hero, conteúdo
+  depois em medida estreita e centralizada (máx. 620 px). O contraste
+  entre a largura total e a coluna estreita é o efeito
+- Dois acentos, não um — um acento solitário sobre fundo escuro é tell
+- Texto de corpo nunca abaixo de `#C9C6C0`
 
-## 4. Solar vibrante
+## 4. Mercado solar
 
-Para açaí, sorveteria, parque, escola infantil, turismo, festa.
+Para açaí, sorveteria, lanchonete, parque, escola infantil, turismo.
 
-- Fundo `#FFFDF6`, texto `#1F2937`, acento `#EA580C`, apoio `#FDE68A`
-- Display: Nunito ou Baloo 2 · Corpo: Nunito Sans
-- Raio 24 px, blocos de cor cheia, sem borda
-- Seções alternando fundo claro e fundo de cor
-- Composição centralizada, botões grandes e redondos
-- Marca registrada: formas orgânicas em SVG no fundo das seções
+- Ground `#FFFCF2`, texto `#2A2118`, acentos `#E05A2B` (laranja),
+  `#F2B705` (amarelo) e `#4C7A5D` (verde)
+- Display: Rubik ou Kumbh Sans · Corpo: Rubik
+- Raios variados de propósito: 32 px em blocos grandes, 8 px em
+  pequenos, 999 px em botões
+- **Estrutura:** grade deslocada — blocos de larguras diferentes que não
+  alinham na mesma coluna. Preços em numeral de display
+- Nada de gradiente; as cores entram em áreas chapadas
 
-## 5. Técnico direto
+## 5. Operação
 
-Para serralheria, assistência técnica, dedetizadora, transportadora, TI.
+Para serralheria, assistência técnica, dedetizadora, transportadora,
+chaveiro, TI.
 
-- Fundo `#F8FAFC`, texto `#0F172A`, acento `#0E7490`, apoio `#E2E8F0`
-- Display e corpo: IBM Plex Sans
-- Raio 6 px, linhas de 1 px, cantos vivos
-- Informação em tabelas e listas; pouca foto, muito dado
-- Telefone e WhatsApp visíveis no topo e no rodapé
-- Marca registrada: faixa de atendimento ou área de cobertura destacada
+- Ground `#F4F6F7`, texto `#101820`, acento `#0B6E6E`, apoio `#D4DBDE`
+- Display: Archivo Condensed · Corpo: Archivo
+- Raio 4 px, cantos vivos, régua de 1 px
+- **Estrutura:** a informação é o protagonista — tabela de serviços,
+  área de cobertura e horário de atendimento ocupam o centro da página.
+  Telefone e WhatsApp fixos no topo
+- Sem monoespaçada em rótulos pequenos (é tell); use Archivo em peso 600
 
-## 6. Editorial calmo
+## 6. Consultório sereno
 
-Para psicólogo, nutricionista, yoga, consultoria, arquitetura.
+Para psicólogo, nutricionista, yoga, fisioterapia, arquitetura.
 
-- Fundo `#F7F6F3`, texto `#23221F`, acento `#4F6B57`, apoio `#DDE3DA`
-- Display: Lora · Corpo: Source Sans 3
-- Raio 2 px, praticamente sem borda; separação por espaço
-- Coluna de texto estreita (máx. 65 caracteres por linha)
-- Uma foto grande e tranquila; nada de colagem
-- Marca registrada: frase de destaque em itálico, isolada numa seção
+- Ground `#EDEFEA` (cinza-verde frio, não creme), texto `#23262A`,
+  acentos `#44614F` e `#A8B2A0`
+- Display: Newsreader · Corpo: Figtree
+- Raio 0; nenhuma borda, separação só por espaço
+- **Estrutura:** coluna única de 60 a 65 caracteres, centralizada, com
+  muito espaço vertical. Uma única frase em tamanho de display isolada
+  numa seção inteira
+- Nenhum card, nenhuma grade de três colunas
 
 ---
 
 ## Como escolher
 
-1. O ramo aponta a direção (listas acima).
-2. Se as referências do briefing contradizem, as referências ganham.
+1. O ramo aponta a direção.
+2. Referências do briefing ganham da lista.
 3. Se o campo `evitar` do briefing exclui a direção óbvia, pegue a
    segunda mais próxima.
-4. Em dúvida entre duas, escolha a de maior contraste com o que os
-   concorrentes citados no briefing usam.
+4. Entre duas, escolha a de maior contraste com os concorrentes citados.
+5. Não repita a mesma direção em dois clientes do mesmo ramo na mesma
+   cidade — confira os `DIRECAO.txt` existentes com `Grep`.
 
-## Proibido em qualquer direção
+## Tells de IA — proibidos em qualquer direção
 
-- Gradiente de três ou mais cores
-- Card com borda colorida só à esquerda
+Estes são os padrões que fazem uma página parecer gerada. Valem acima da
+direção escolhida.
+
+**Paleta e composição**
+
+- Fundo creme quente (perto de `#F4F1EA`) com serifada de alto contraste
+  e acento terracota ou argila (perto de `#D97757`)
+- Fundo quase preto com um único acento verde-ácido ou vermelhão
+- Preto "amaciado" (`#0B0B0B`, `#111`) no lugar de preto de verdade
+- Lavagem de gradiente como decoração
+- Tudo picado em cards idênticos, mesmo raio em todos os elementos
+  independente da hierarquia, e a mesma sombra cinza suave
+  (`rgba(0,0,0,.1)`) embaixo de cada um
+- Card com borda colorida só na lateral esquerda
+
+**Tipografia**
+
+- Destacar uma só palavra do título em itálico, negrito ou outra cor
+- Rótulo em CAIXA ALTA com espaçamento alargado acima de cada seção
+- Rótulo acima de conteúdo que já se explica
+- `PALAVRA — fragmento` com travessão espaçado
+- Metadados juntados por ponto médio (`A · B · C`)
+- Monoespaçada em rótulos pequenos de dado
+- `→` colado no fim de texto de link ou botão
+
+**Estrutura e movimento**
+
+- Marcadores numerados `01 / 02 / 03` em conteúdo que não é sequência
+- Entrada com fade e subida em cada seção durante o scroll
+- `transition` em hover de todos os cards
 - Emoji como ícone
-- Sombra forte em todos os blocos
-- Texto sobre foto sem camada de contraste
+- Ícone de biblioteca repetido em cada bloco
+
+**Cópia**
+
+- "Qualidade e tradição", "Excelência em atendimento", "Soluções sob
+  medida" e afins: adjetivo sem fato
 - Mais de duas famílias tipográficas
-- Animação que não seja um `transition` curto em hover
+
+Cada um desses pode ser legítimo se o briefing pediu. O problema é usá-lo
+por falta de decisão. Gaste a ousadia em **um** lugar da página e deixe o
+resto disciplinado.

@@ -18,6 +18,8 @@ Você recebe o caminho da pasta do cliente. Leia apenas:
 1. `clientes/<cliente>/site/index.html`
 2. `clientes/<cliente>/briefing.md`
 3. `.claude/skills/criar-landing/checklist-entrega.md`
+4. `referencias/direcoes-visuais.md` — apenas a seção **Tells de IA**
+5. `clientes/<cliente>/DIRECAO.txt`
 
 Não leia mais nada. Não abra navegador, não instale pacote, não rode
 build.
@@ -40,6 +42,16 @@ campo por campo. Procure especificamente por:
 - Largura fixa em px que estoure 360 px de viewport
 - Contraste suspeito: calcule a razão dos pares texto/fundo que
   encontrar no CSS e aponte os abaixo de 4.5:1
+- Tells de IA que o briefing não pediu: palavra isolada do título
+  destacada, rótulo em caixa alta com tracking, `01/02/03` fora de
+  sequência, `→` em texto de botão, ponto médio em metadados,
+  monoespaçada em rótulo pequeno, gradiente decorativo, mesmo raio e
+  mesma sombra em todos os elementos, fade-up por seção, emoji como
+  ícone, mais de duas famílias tipográficas, adjetivo sem fato na cópia
+- Página sem fotos: retângulo cinza ou `[foto: ...]` sobrando, hero sem
+  nenhum recurso visual, foto de banco sem autorização no briefing
+- Incoerência entre o `DIRECAO.txt` declarado e a paleta ou tipografia
+  do CSS
 
 Para contraste e tamanho de arquivo, use `Bash` com um comando curto,
 não um script longo.
