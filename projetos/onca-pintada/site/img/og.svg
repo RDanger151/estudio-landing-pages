@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#0F1C17"/>
+  <rect x="0" y="0" width="14" height="630" fill="#C8872E"/>
+  <g fill="none" stroke="#1E322A" stroke-width="7" stroke-dasharray="18 9">
+    <ellipse cx="150" cy="120" rx="40" ry="30"/><ellipse cx="290" cy="230" rx="44" ry="33"/>
+    <ellipse cx="130" cy="330" rx="38" ry="28"/><ellipse cx="260" cy="450" rx="42" ry="31"/>
+    <ellipse cx="120" cy="545" rx="36" ry="27"/><ellipse cx="400" cy="110" rx="38" ry="28"/>
+    <ellipse cx="420" cy="520" rx="40" ry="30"/>
+  </g>
+  <g transform="translate(596 28) scale(1.04)">
+  <!-- peitoral -->
+  <path d="M128 352 C66 392 38 468 32 580 L408 580 C402 468 374 392 312 352 Z" fill="#C8872E"/>
+  <path d="M128 352 C108 368 92 390 82 416 C126 444 186 456 220 456 C254 456 314 444 358 416 C348 390 332 368 312 352 Z" fill="#B87826"/>
+  <g fill="none" stroke="#5E2810" stroke-width="5" stroke-dasharray="13 6">
+    <ellipse cx="88" cy="486" rx="24" ry="18"/>
+    <ellipse cx="152" cy="534" rx="26" ry="19"/>
+    <ellipse cx="220" cy="474" rx="22" ry="16"/>
+    <ellipse cx="292" cy="534" rx="26" ry="19"/>
+    <ellipse cx="356" cy="486" rx="24" ry="18"/>
+    <ellipse cx="78" cy="560" rx="20" ry="15"/>
+    <ellipse cx="368" cy="560" rx="20" ry="15"/>
+    <ellipse cx="220" cy="556" rx="23" ry="17"/>
+  </g>
+  <g fill="#5E2810">
+    <ellipse cx="88" cy="486" rx="5" ry="4"/><ellipse cx="152" cy="534" rx="5" ry="4"/>
+    <ellipse cx="292" cy="534" rx="5" ry="4"/><ellipse cx="356" cy="486" rx="5" ry="4"/>
+    <ellipse cx="220" cy="474" rx="4" ry="3"/>
+  </g>
+
+  <!-- orelhas, pequenas e baixas -->
+  <path d="M88 170 C70 120 90 78 128 80 C160 82 176 116 178 148 Z" fill="#C8872E"/>
+  <path d="M352 170 C370 120 350 78 312 80 C280 82 264 116 262 148 Z" fill="#C8872E"/>
+  <path d="M104 152 C94 118 108 96 128 98 C146 100 156 122 157 144 Z" fill="#4A2113"/>
+  <path d="M336 152 C346 118 332 96 312 98 C294 100 284 122 283 144 Z" fill="#4A2113"/>
+
+  <!-- cabeça larga e maxilares -->
+  <ellipse cx="220" cy="218" rx="152" ry="126" fill="#C8872E"/>
+  <ellipse cx="110" cy="262" rx="48" ry="64" fill="#D59A3F"/>
+  <ellipse cx="330" cy="262" rx="48" ry="64" fill="#D59A3F"/>
+
+  <!-- rosetas da cabeça -->
+  <g fill="none" stroke="#5E2810" stroke-width="5" stroke-dasharray="12 6">
+    <ellipse cx="96" cy="196" rx="22" ry="16"/>
+    <ellipse cx="344" cy="196" rx="22" ry="16"/>
+    <ellipse cx="80" cy="268" rx="19" ry="14"/>
+    <ellipse cx="360" cy="268" rx="19" ry="14"/>
+    <ellipse cx="118" cy="330" rx="18" ry="13"/>
+    <ellipse cx="322" cy="330" rx="18" ry="13"/>
+    <ellipse cx="150" cy="108" rx="17" ry="12"/>
+    <ellipse cx="290" cy="108" rx="17" ry="12"/>
+  </g>
+  <g fill="#5E2810">
+    <ellipse cx="96" cy="196" rx="4.5" ry="3.5"/><ellipse cx="344" cy="196" rx="4.5" ry="3.5"/>
+    <ellipse cx="80" cy="268" rx="4.5" ry="3.5"/><ellipse cx="360" cy="268" rx="4.5" ry="3.5"/>
+  </g>
+
+  <!-- marcas da testa, inclinadas -->
+  <g fill="#4A2113">
+    <path d="M146 134 L161 125 L174 150 L159 159 Z"/>
+    <path d="M186 124 L199 117 L208 143 L195 150 Z"/>
+    <path d="M294 134 L279 125 L266 150 L281 159 Z"/>
+    <path d="M254 124 L241 117 L232 143 L245 150 Z"/>
+  </g>
+
+  <!-- focinho -->
+  <path d="M220 232 C284 232 326 262 326 302 C326 344 278 370 220 370 C162 370 114 344 114 302 C114 262 156 232 220 232 Z" fill="#EFE0C4"/>
+
+  <!-- olhos estreitos e inclinados -->
+  <path d="M134 194 C150 172 188 176 204 206 C184 218 148 212 134 194 Z" fill="#F7F0DE"/>
+  <path d="M306 194 C290 172 252 176 236 206 C256 218 292 212 306 194 Z" fill="#F7F0DE"/>
+  <ellipse cx="168" cy="197" rx="16" ry="15" fill="#D9A32E"/>
+  <ellipse cx="272" cy="197" rx="16" ry="15" fill="#D9A32E"/>
+  <ellipse cx="168" cy="198" rx="7" ry="10" fill="#17231B"/>
+  <ellipse cx="272" cy="198" rx="7" ry="10" fill="#17231B"/>
+  <ellipse cx="163" cy="191" rx="3.2" ry="2.8" fill="#FBF6E8"/>
+  <ellipse cx="267" cy="191" rx="3.2" ry="2.8" fill="#FBF6E8"/>
+  <path d="M130 190 C148 166 190 172 208 206" fill="none" stroke="#3A1A0F" stroke-width="8" stroke-linecap="round"/>
+  <path d="M310 190 C292 166 250 172 232 206" fill="none" stroke="#3A1A0F" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- nariz, boca entreaberta e presas -->
+  <path d="M220 260 L253 284 C253 302 238 312 220 312 C202 312 187 302 187 284 Z" fill="#3A1A0F"/>
+  <path d="M220 312 L220 326" fill="none" stroke="#3A1A0F" stroke-width="6" stroke-linecap="round"/>
+  <path d="M220 326 C206 342 186 342 174 330" fill="none" stroke="#3A1A0F" stroke-width="6" stroke-linecap="round"/>
+  <path d="M220 326 C234 342 254 342 266 330" fill="none" stroke="#3A1A0F" stroke-width="6" stroke-linecap="round"/>
+  <path d="M182 332 C198 346 242 346 258 332 C256 358 234 370 220 370 C206 370 184 358 182 332 Z" fill="#2A0E08"/>
+  <path d="M197 336 L209 336 L203 360 Z" fill="#F7F0DE"/>
+  <path d="M231 336 L243 336 L237 360 Z" fill="#F7F0DE"/>
+
+  <!-- pontos dos bigodes -->
+  <g fill="#C3A478">
+    <circle cx="160" cy="288" r="3.4"/><circle cx="144" cy="304" r="3.4"/><circle cx="166" cy="310" r="3.4"/>
+    <circle cx="280" cy="288" r="3.4"/><circle cx="296" cy="304" r="3.4"/><circle cx="274" cy="310" r="3.4"/>
+  </g>
+</g>
+</svg>

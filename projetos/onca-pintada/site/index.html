@@ -1,0 +1,673 @@
+<!doctype html>
+<!--
+  PÁGINA DE DEMONSTRAÇÃO — projeto próprio, modo livre.
+  Não é o site de nenhuma instituição, projeto de conservação ou empresa,
+  e não representa nenhuma delas. Não há contato porque não há negócio
+  por trás.
+  Os dados sobre a onça-pintada são reais e as fontes estão no rodapé,
+  com a data da consulta. A onça é um desenho vetorial feito para este
+  projeto, não uma fotografia.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Onça-pintada: a mordida que perfura crânios</title>
+<meta name="description" content="Como a onça-pintada mata, quanta força isso exige e as cerca de 85 espécies que ela come. Com dados do ICMBio e de estudos de dieta.">
+<meta property="og:title" content="Onça-pintada: a mordida que perfura crânios">
+<meta property="og:description" content="Como a onça-pintada mata, quanta força isso exige e o que ela come. Com fontes.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="img/og.png">
+<link rel="icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinta: #0F1C17;
+    --mata: #16271F;
+    --osso: #EDE7D9;
+    --ocre: #C8872E;
+    --ferrugem: #7A3A22;
+    --escrita: #1A2B24;
+    --osso-fosco: #CFC6B2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--tinta);
+    color: var(--osso);
+    font-family: Figtree, system-ui, sans-serif;
+    font-size: 18px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .faixa { padding: 104px 0; }
+  .dentro {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .medida { max-width: 62ch; }
+  h1, h2, .numeral {
+    font-family: Anton, Impact, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.005em;
+    margin: 0;
+  }
+  h1 { font-size: clamp(2.6rem, 7.2vw, 5.4rem); line-height: 1.02; }
+  h2 { font-size: clamp(1.9rem, 4.2vw, 3rem); line-height: 1.08; }
+  h3 {
+    font-family: Figtree, sans-serif;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  p { margin: 0; }
+  a { color: var(--ocre); }
+  a:hover { color: var(--osso); }
+  .clara a { color: var(--ferrugem); }
+  .clara a:hover { color: var(--escrita); }
+  a:focus-visible, summary:focus-visible {
+    outline: 3px solid var(--ocre);
+    outline-offset: 3px;
+  }
+  .clara {
+    background: var(--osso);
+    color: var(--escrita);
+  }
+
+  /* topo */
+  .topo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 32px;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 28px 0 0;
+  }
+  .binomio {
+    font-style: italic;
+    font-size: 1.0625rem;
+    color: var(--ocre);
+  }
+  .atalhos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  /* hero: a onça atravessa a borda inferior */
+  .hero {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 200px;
+  }
+  .hero-texto { max-width: 19ch; }
+  .hero h1 { margin-bottom: 28px; }
+  .hero .linha-fina {
+    max-width: 46ch;
+    font-size: 1.1875rem;
+    color: var(--osso-fosco);
+  }
+  .onca {
+    position: absolute;
+    right: 3%;
+    bottom: -150px;
+    width: min(44vw, 430px);
+    height: auto;
+    display: block;
+    z-index: 3;
+  }
+
+  /* mordida */
+  .mordida {
+    position: relative;
+    z-index: 1;
+    padding-top: 180px;
+  }
+  .mordida h2 { max-width: 24ch; margin-bottom: 24px; }
+  .mordida .medida { font-size: 1.125rem; }
+  .mordida .medida + .medida { margin-top: 18px; }
+  .numeros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 2px;
+    margin-top: 56px;
+    background: #D9D0BC;
+  }
+  .numero { background: var(--osso); padding: 28px 24px; }
+  .numero .numeral {
+    display: block;
+    font-size: clamp(2.1rem, 4.6vw, 3.1rem);
+    color: var(--ferrugem);
+    line-height: 1;
+  }
+  .numero .rotulo {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9375rem;
+    line-height: 1.45;
+    color: #4A5A52;
+  }
+
+  /* comparação */
+  .comparacao { background: var(--mata); }
+  .comparacao h2 { margin-bottom: 16px; }
+  .comparacao .medida { color: var(--osso-fosco); }
+  .barras { margin-top: 48px; display: grid; gap: 22px; }
+  .barra-linha {
+    display: grid;
+    grid-template-columns: minmax(130px, 210px) 1fr;
+    gap: 10px 20px;
+    align-items: center;
+  }
+  .barra-nome { font-size: 1.0625rem; }
+  .barra-trilho { display: flex; align-items: center; gap: 12px; }
+  .barra-peso {
+    height: 26px;
+    background: #2E4238;
+    border-radius: 0 2px 2px 0;
+    min-width: 3px;
+  }
+  .destaque .barra-peso { background: var(--ocre); height: 38px; }
+  .destaque .barra-nome { font-weight: 600; color: var(--ocre); }
+  .barra-valor {
+    font-family: Anton, Impact, sans-serif;
+    font-size: 1.125rem;
+    white-space: nowrap;
+    color: var(--osso-fosco);
+  }
+  .destaque .barra-valor { color: var(--ocre); font-size: 1.375rem; }
+  .nota {
+    margin-top: 32px;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    max-width: 64ch;
+    color: var(--osso-fosco);
+  }
+
+  /* cardápio */
+  .cardapio h2 { margin-bottom: 20px; }
+  .grupos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 56px 48px;
+    margin-top: 52px;
+  }
+  .grupo h3 {
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--escrita);
+  }
+  .lista { list-style: none; margin: 0; padding: 0; }
+  .lista li {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 13px 0;
+    border-bottom: 1px solid #CCC3AF;
+    font-size: 1.0625rem;
+  }
+  .lista .pontos {
+    flex: 1;
+    border-bottom: 1px dotted #A79D88;
+    transform: translateY(-4px);
+  }
+  .lista .marca {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--ferrugem);
+    white-space: nowrap;
+  }
+  .dieta-dados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 32px;
+    margin-top: 60px;
+    padding-top: 36px;
+    border-top: 2px solid var(--escrita);
+  }
+  .dieta-dados .numeral {
+    display: block;
+    font-size: 2.25rem;
+    color: var(--ferrugem);
+    line-height: 1;
+  }
+  .dieta-dados .rotulo {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.9375rem;
+    line-height: 1.45;
+    color: #4A5A52;
+  }
+
+  /* ficha */
+  .ficha h2 { margin-bottom: 36px; }
+  .tabela-caixa { overflow-x: auto; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.0625rem;
+  }
+  caption {
+    text-align: left;
+    font-size: 0.9375rem;
+    color: var(--osso-fosco);
+    padding-bottom: 16px;
+  }
+  th, td {
+    text-align: left;
+    padding: 15px 18px 15px 0;
+    border-bottom: 1px solid #2E4238;
+    vertical-align: top;
+  }
+  th { font-weight: 600; width: 42%; }
+  td { color: var(--osso-fosco); }
+
+  /* conservação */
+  .situacao { background: var(--ferrugem); }
+  .situacao h2 { margin-bottom: 20px; }
+  .situacao .medida { color: #F3E7DC; }
+  .situacao .medida + .medida { margin-top: 18px; }
+  .biomas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1px;
+    margin-top: 48px;
+    background: #8F4B30;
+  }
+  .bioma { background: var(--ferrugem); padding: 24px 22px; }
+  .bioma .grau {
+    font-family: Anton, Impact, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.15;
+    display: block;
+  }
+  .bioma .onde {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.9375rem;
+    color: #F0DCCE;
+  }
+  .bioma .area {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.9375rem;
+    color: #F0DCCE;
+  }
+  .ver-fontes {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    margin-top: 44px;
+    padding: 0 28px;
+    border: 2px solid #F3E7DC;
+    border-radius: 999px;
+    color: #F3E7DC;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .ver-fontes:hover { background: #F3E7DC; color: var(--ferrugem); }
+
+  /* rodapé */
+  footer { padding: 88px 0 72px; }
+  footer h2 { font-size: 1.5rem; margin-bottom: 28px; }
+  .fontes { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+  .fontes li { max-width: 78ch; font-size: 1rem; line-height: 1.55; }
+  .fontes .oque {
+    display: block;
+    font-size: 0.9375rem;
+    color: var(--osso-fosco);
+  }
+  .rodape-nota {
+    margin-top: 52px;
+    padding-top: 28px;
+    border-top: 1px solid #2E4238;
+    max-width: 72ch;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--osso-fosco);
+  }
+
+  @media (max-width: 760px) {
+    body { font-size: 17px; }
+    .faixa { padding: 72px 0; }
+    .hero { padding-bottom: 32px; }
+    .hero-texto { max-width: none; }
+    .onca {
+      position: static;
+      width: min(78vw, 330px);
+      margin: 40px auto -78px;
+      right: auto;
+      bottom: auto;
+    }
+    .mordida { padding-top: 104px; }
+    .barra-linha { grid-template-columns: 1fr; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="dentro topo">
+  <span class="binomio">Panthera onca</span>
+  <nav class="atalhos" aria-label="Seções desta página">
+    <a href="#mordida">A mordida</a>
+    <a href="#cardapio">O cardápio</a>
+    <a href="#situacao">Situação</a>
+  </nav>
+</header>
+
+<section class="faixa hero">
+  <div class="dentro">
+    <div class="hero-texto">
+      <h1>Ela não morde o pescoço. Ela perfura o crânio.</h1>
+    </div>
+    <p class="linha-fina">Entre os grandes felinos, a onça-pintada é a única que mata assim como rotina: uma mordida entre as orelhas, atravessando o osso até o cérebro.</p>
+  </div>
+
+  <svg class="onca" viewBox="0 0 440 580" role="img" aria-label="Ilustração de uma onça-pintada vista de frente, da cabeça ao peitoral, com a boca entreaberta mostrando as presas">
+  <!-- peitoral -->
+  <path d="M128 352 C66 392 38 468 32 580 L408 580 C402 468 374 392 312 352 Z" fill="#C8872E"/>
+  <path d="M128 352 C108 368 92 390 82 416 C126 444 186 456 220 456 C254 456 314 444 358 416 C348 390 332 368 312 352 Z" fill="#B87826"/>
+  <g fill="none" stroke="#5E2810" stroke-width="5" stroke-dasharray="13 6">
+    <ellipse cx="88" cy="486" rx="24" ry="18"/>
+    <ellipse cx="152" cy="534" rx="26" ry="19"/>
+    <ellipse cx="220" cy="474" rx="22" ry="16"/>
+    <ellipse cx="292" cy="534" rx="26" ry="19"/>
+    <ellipse cx="356" cy="486" rx="24" ry="18"/>
+    <ellipse cx="78" cy="560" rx="20" ry="15"/>
+    <ellipse cx="368" cy="560" rx="20" ry="15"/>
+    <ellipse cx="220" cy="556" rx="23" ry="17"/>
+  </g>
+  <g fill="#5E2810">
+    <ellipse cx="88" cy="486" rx="5" ry="4"/><ellipse cx="152" cy="534" rx="5" ry="4"/>
+    <ellipse cx="292" cy="534" rx="5" ry="4"/><ellipse cx="356" cy="486" rx="5" ry="4"/>
+    <ellipse cx="220" cy="474" rx="4" ry="3"/>
+  </g>
+
+  <!-- orelhas, pequenas e baixas -->
+  <path d="M88 170 C70 120 90 78 128 80 C160 82 176 116 178 148 Z" fill="#C8872E"/>
+  <path d="M352 170 C370 120 350 78 312 80 C280 82 264 116 262 148 Z" fill="#C8872E"/>
+  <path d="M104 152 C94 118 108 96 128 98 C146 100 156 122 157 144 Z" fill="#4A2113"/>
+  <path d="M336 152 C346 118 332 96 312 98 C294 100 284 122 283 144 Z" fill="#4A2113"/>
+
+  <!-- cabeça larga e maxilares -->
+  <ellipse cx="220" cy="218" rx="152" ry="126" fill="#C8872E"/>
+  <ellipse cx="110" cy="262" rx="48" ry="64" fill="#D59A3F"/>
+  <ellipse cx="330" cy="262" rx="48" ry="64" fill="#D59A3F"/>
+
+  <!-- rosetas da cabeça -->
+  <g fill="none" stroke="#5E2810" stroke-width="5" stroke-dasharray="12 6">
+    <ellipse cx="96" cy="196" rx="22" ry="16"/>
+    <ellipse cx="344" cy="196" rx="22" ry="16"/>
+    <ellipse cx="80" cy="268" rx="19" ry="14"/>
+    <ellipse cx="360" cy="268" rx="19" ry="14"/>
+    <ellipse cx="118" cy="330" rx="18" ry="13"/>
+    <ellipse cx="322" cy="330" rx="18" ry="13"/>
+    <ellipse cx="150" cy="108" rx="17" ry="12"/>
+    <ellipse cx="290" cy="108" rx="17" ry="12"/>
+  </g>
+  <g fill="#5E2810">
+    <ellipse cx="96" cy="196" rx="4.5" ry="3.5"/><ellipse cx="344" cy="196" rx="4.5" ry="3.5"/>
+    <ellipse cx="80" cy="268" rx="4.5" ry="3.5"/><ellipse cx="360" cy="268" rx="4.5" ry="3.5"/>
+  </g>
+
+  <!-- marcas da testa, inclinadas -->
+  <g fill="#4A2113">
+    <path d="M146 134 L161 125 L174 150 L159 159 Z"/>
+    <path d="M186 124 L199 117 L208 143 L195 150 Z"/>
+    <path d="M294 134 L279 125 L266 150 L281 159 Z"/>
+    <path d="M254 124 L241 117 L232 143 L245 150 Z"/>
+  </g>
+
+  <!-- focinho -->
+  <path d="M220 232 C284 232 326 262 326 302 C326 344 278 370 220 370 C162 370 114 344 114 302 C114 262 156 232 220 232 Z" fill="#EFE0C4"/>
+
+  <!-- olhos estreitos e inclinados -->
+  <path d="M134 194 C150 172 188 176 204 206 C184 218 148 212 134 194 Z" fill="#F7F0DE"/>
+  <path d="M306 194 C290 172 252 176 236 206 C256 218 292 212 306 194 Z" fill="#F7F0DE"/>
+  <ellipse cx="168" cy="197" rx="16" ry="15" fill="#D9A32E"/>
+  <ellipse cx="272" cy="197" rx="16" ry="15" fill="#D9A32E"/>
+  <ellipse cx="168" cy="198" rx="7" ry="10" fill="#17231B"/>
+  <ellipse cx="272" cy="198" rx="7" ry="10" fill="#17231B"/>
+  <ellipse cx="163" cy="191" rx="3.2" ry="2.8" fill="#FBF6E8"/>
+  <ellipse cx="267" cy="191" rx="3.2" ry="2.8" fill="#FBF6E8"/>
+  <path d="M130 190 C148 166 190 172 208 206" fill="none" stroke="#3A1A0F" stroke-width="8" stroke-linecap="round"/>
+  <path d="M310 190 C292 166 250 172 232 206" fill="none" stroke="#3A1A0F" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- nariz, boca entreaberta e presas -->
+  <path d="M220 260 L253 284 C253 302 238 312 220 312 C202 312 187 302 187 284 Z" fill="#3A1A0F"/>
+  <path d="M220 312 L220 326" fill="none" stroke="#3A1A0F" stroke-width="6" stroke-linecap="round"/>
+  <path d="M220 326 C206 342 186 342 174 330" fill="none" stroke="#3A1A0F" stroke-width="6" stroke-linecap="round"/>
+  <path d="M220 326 C234 342 254 342 266 330" fill="none" stroke="#3A1A0F" stroke-width="6" stroke-linecap="round"/>
+  <path d="M182 332 C198 346 242 346 258 332 C256 358 234 370 220 370 C206 370 184 358 182 332 Z" fill="#2A0E08"/>
+  <path d="M197 336 L209 336 L203 360 Z" fill="#F7F0DE"/>
+  <path d="M231 336 L243 336 L237 360 Z" fill="#F7F0DE"/>
+
+  <!-- pontos dos bigodes -->
+  <g fill="#C3A478">
+    <circle cx="160" cy="288" r="3.4"/><circle cx="144" cy="304" r="3.4"/><circle cx="166" cy="310" r="3.4"/>
+    <circle cx="280" cy="288" r="3.4"/><circle cx="296" cy="304" r="3.4"/><circle cx="274" cy="310" r="3.4"/>
+  </g>
+  </svg>
+</section>
+
+<section class="faixa clara mordida" id="mordida">
+  <div class="dentro">
+    <h2>A força serve para uma coisa só: atravessar osso</h2>
+    <p class="medida">Leões e tigres sufocam a presa pela garganta. A onça-pintada faz diferente. Ela morde o topo da cabeça, entre as orelhas, e os caninos vão até o cérebro. Em capivara, documentou-se a mordida atravessando o osso temporal, quebrando o arco zigomático e a mandíbula no caminho.</p>
+    <p class="medida">É também o que permite a ela comer o que outros felinos não conseguem abrir: cascos de tartaruga e de jabuti, quebrados com os dentes ou com a pata, para então raspar o interior. No jacaré a técnica muda, e a mordida vai para o alto do pescoço.</p>
+
+    <div class="numeros">
+      <div class="numero">
+        <span class="numeral">887 N</span>
+        <span class="rotulo">Força média na ponta do canino</span>
+      </div>
+      <div class="numero">
+        <span class="numeral">4,9 kN</span>
+        <span class="rotulo">Nos caninos, em exemplar de 100 kg</span>
+      </div>
+      <div class="numero">
+        <span class="numeral">6,9 kN</span>
+        <span class="rotulo">Na carniceira, o dente que corta, no mesmo exemplar</span>
+      </div>
+      <div class="numero">
+        <span class="numeral">118,6</span>
+        <span class="rotulo">Quociente de força de mordida, que corrige pelo tamanho do corpo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faixa comparacao">
+  <div class="dentro">
+    <h2>Onde isso a coloca</h2>
+    <p class="medida">Em força absoluta, a onça tem a terceira maior mordida entre os felinos, atrás do tigre e do leão. Comparada ao resto do reino animal, fica no meio da tabela — e ainda assim com quase dez vezes a força de um ser humano.</p>
+
+    <div class="barras">
+      <div class="barra-linha">
+        <span class="barra-nome">Crocodilo-de-água-salgada</span>
+        <span class="barra-trilho">
+          <span class="barra-peso" style="width: 100%"></span>
+          <span class="barra-valor">3.700</span>
+        </span>
+      </div>
+      <div class="barra-linha">
+        <span class="barra-nome">Hipopótamo</span>
+        <span class="barra-trilho">
+          <span class="barra-peso" style="width: 48.6%"></span>
+          <span class="barra-valor">1.800</span>
+        </span>
+      </div>
+      <div class="barra-linha destaque">
+        <span class="barra-nome">Onça-pintada</span>
+        <span class="barra-trilho">
+          <span class="barra-peso" style="width: 40.5%"></span>
+          <span class="barra-valor">1.500</span>
+        </span>
+      </div>
+      <div class="barra-linha">
+        <span class="barra-nome">Gorila</span>
+        <span class="barra-trilho">
+          <span class="barra-peso" style="width: 35.1%"></span>
+          <span class="barra-valor">1.300</span>
+        </span>
+      </div>
+      <div class="barra-linha">
+        <span class="barra-nome">Hiena</span>
+        <span class="barra-trilho">
+          <span class="barra-peso" style="width: 29.7%"></span>
+          <span class="barra-valor">1.100</span>
+        </span>
+      </div>
+      <div class="barra-linha">
+        <span class="barra-nome">Ser humano</span>
+        <span class="barra-trilho">
+          <span class="barra-peso" style="width: 4.4%"></span>
+          <span class="barra-valor">162</span>
+        </span>
+      </div>
+    </div>
+    <p class="nota">Valores em PSI, libras por polegada quadrada, como publicados pela BBC Science Focus. Medidas de força de mordida variam muito conforme o método e o ponto do dente, por isso os números em newton da seção anterior, de origem acadêmica, não são diretamente conversíveis nesta escala.</p>
+  </div>
+</section>
+
+<section class="faixa clara cardapio" id="cardapio">
+  <div class="dentro">
+    <h2>O cardápio</h2>
+    <p class="medida">Cerca de 85 espécies já foram registradas na dieta da onça-pintada. Ela não é especialista: come o que o território oferece. No Pantanal alagado, chega a depender de peixe e réptil; no México central, o veado-de-cauda-branca responde por 54% da dieta.</p>
+
+    <div class="grupos">
+      <div class="grupo">
+        <h3>Em terra</h3>
+        <ul class="lista">
+          <li><span>Capivara</span><span class="pontos"></span><span class="marca">mais selecionada</span></li>
+          <li><span>Tamanduá-bandeira</span><span class="pontos"></span><span class="marca">mais selecionada</span></li>
+          <li><span>Cervo-do-pantanal</span><span class="pontos"></span></li>
+          <li><span>Tamanduá-mirim</span><span class="pontos"></span></li>
+          <li><span>Cateto</span><span class="pontos"></span></li>
+          <li><span>Cutia-preta</span><span class="pontos"></span></li>
+          <li><span>Veado-mateiro</span><span class="pontos"></span></li>
+          <li><span>Anta</span><span class="pontos"></span></li>
+          <li><span>Tatu</span><span class="pontos"></span></li>
+          <li><span>Gado</span><span class="pontos"></span><span class="marca">ocasional</span></li>
+        </ul>
+      </div>
+      <div class="grupo">
+        <h3>Na água e na várzea</h3>
+        <ul class="lista">
+          <li><span>Jacaré</span><span class="pontos"></span></li>
+          <li><span>Sucuri</span><span class="pontos"></span></li>
+          <li><span>Tartaruga</span><span class="pontos"></span></li>
+          <li><span>Armado</span><span class="pontos"></span><span class="marca">Pantanal</span></li>
+          <li><span>Pacu-peba</span><span class="pontos"></span><span class="marca">Pantanal</span></li>
+          <li><span>Piranha-vermelha</span><span class="pontos"></span><span class="marca">Pantanal</span></li>
+          <li><span>Bagre-listrado</span><span class="pontos"></span><span class="marca">Pantanal</span></li>
+          <li><span>Iguana</span><span class="pontos"></span></li>
+          <li><span>Aves</span><span class="pontos"></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dieta-dados">
+      <div>
+        <span class="numeral">1 a 130 kg</span>
+        <span class="rotulo">Faixa de peso das presas registradas em 53 estudos de dieta</span>
+      </div>
+      <div>
+        <span class="numeral">45 a 85 kg</span>
+        <span class="rotulo">A faixa que ela prefere, quando tem escolha</span>
+      </div>
+      <div>
+        <span class="numeral">1,2 a 1,5 kg</span>
+        <span class="rotulo">Carne por dia, estimado para um animal de 34 kg</span>
+      </div>
+      <div>
+        <span class="numeral">~85</span>
+        <span class="rotulo">Espécies já registradas na dieta</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faixa ficha">
+  <div class="dentro">
+    <h2>Ficha</h2>
+    <div class="tabela-caixa">
+      <table>
+        <caption>Medidas da espécie ao longo de sua área de distribuição.</caption>
+        <tbody>
+          <tr><th scope="row">Peso, na maior parte da distribuição</th><td>56 a 96 kg</td></tr>
+          <tr><th scope="row">Maior macho registrado</th><td>158 kg</td></tr>
+          <tr><th scope="row">Menores fêmeas, na América Média, do México ao Panamá</th><td>cerca de 36 kg</td></tr>
+          <tr><th scope="row">Comprimento do corpo, do nariz à base da cauda</th><td>1,12 a 1,85 m</td></tr>
+          <tr><th scope="row">Altura na cernelha</th><td>57 a 81 cm</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="faixa situacao" id="situacao">
+  <div class="dentro">
+    <h2>No Brasil, ela é uma espécie vulnerável</h2>
+    <p class="medida">A lista oficial brasileira classifica a onça-pintada como Vulnerável. Na lista global da IUCN ela aparece em categoria mais branda, Quase Ameaçada — mas essa média esconde o que acontece bioma por bioma. O Plano de Ação Nacional do ICMBio propõe um grau para cada um.</p>
+
+    <div class="biomas">
+      <div class="bioma">
+        <span class="grau">Criticamente em perigo</span>
+        <span class="onde">Mata Atlântica</span>
+        <span class="area">Cerca de 30.382 km² ocupados, quase tudo dentro de unidade de conservação</span>
+      </div>
+      <div class="bioma">
+        <span class="grau">Criticamente em perigo</span>
+        <span class="onde">Caatinga</span>
+        <span class="area">87.325 km², cerca de 10% do bioma, em cinco subpopulações</span>
+      </div>
+      <div class="bioma">
+        <span class="grau">Em perigo</span>
+        <span class="onde">Cerrado</span>
+        <span class="area">582.287 km² de ocupação estimada, em 11 subpopulações</span>
+      </div>
+      <div class="bioma">
+        <span class="grau">Quase ameaçada</span>
+        <span class="onde">Pantanal e Amazônia</span>
+        <span class="area">No Pantanal, 70.073 km², cerca de 47% do bioma</span>
+      </div>
+    </div>
+
+    <p class="medida" style="margin-top: 48px">As ameaças são conhecidas: perda e fragmentação de hábitat por pecuária, monocultura de soja e desmatamento, sobretudo no arco do desmatamento amazônico; caça, incluindo a esportiva ilegal; o conflito com humanos por causa de animais domésticos, que é a principal causa de declínio na Caatinga; e a redução das presas, que derruba a capacidade de suporte do ambiente.</p>
+
+    <a class="ver-fontes" href="#fontes">Ver as fontes</a>
+  </div>
+</section>
+
+<footer class="dentro" id="fontes">
+  <h2>Fontes</h2>
+  <ul class="fontes">
+    <li>
+      <a href="https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/pan-onca-pintada/1-ciclo/pan-onca-pintada-sumario.pdf" target="_blank" rel="noopener noreferrer">ICMBio — Plano de Ação Nacional para a Conservação da Onça-pintada, sumário executivo</a>
+      <span class="oque">Status no Brasil e por bioma, áreas de ocupação e ameaças.</span>
+    </li>
+    <li>
+      <a href="https://ielc.libguides.com/sdzg/factsheets/jaguar/diet" target="_blank" rel="noopener noreferrer">San Diego Zoo Wildlife Alliance Library — ficha de dieta da onça-pintada</a>
+      <span class="oque">Espécies de presa, cerca de 85 espécies, consumo de 1,2 a 1,5 kg por dia e a mordida no pescoço do jacaré.</span>
+    </li>
+    <li>
+      <a href="https://en.wikipedia.org/wiki/Jaguar" target="_blank" rel="noopener noreferrer">Wikipédia — verbete <i>Jaguar</i></a>
+      <span class="oque">Técnica de mordida no crânio, força em newton, quociente de força de mordida, medidas corporais e a análise de 53 estudos de dieta.</span>
+    </li>
+    <li>
+      <a href="https://www.sciencefocus.com/a/top-10-which-animals-have-the-strongest-bite/" target="_blank" rel="noopener noreferrer">BBC Science Focus — Which animals have the strongest bite?</a>
+      <span class="oque">Comparação de força de mordida em PSI entre espécies.</span>
+    </li>
+  </ul>
+  <p class="rodape-nota">Dados consultados em 24 de outubro de 2026. Esta é uma página de demonstração, feita como exemplo de uso de um gerador de landing pages: não representa nenhuma instituição, projeto de conservação ou empresa, e por isso não traz contato. A onça é um desenho vetorial feito para este projeto, não uma fotografia.</p>
+</footer>
+
+</body>
+</html>

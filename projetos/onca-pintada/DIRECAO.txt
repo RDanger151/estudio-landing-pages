@@ -1,0 +1,29 @@
+Direção: Ofício, adaptada ao tema (mata fechada)
+
+Base: direção 1 de referencias/direcoes-visuais.md — faixas horizontais
+de alturas desiguais e lista em ledger. A paleta foi substituída pelo
+assunto, como a própria referência permite quando o briefing pede cores:
+verde-tinta de mata no lugar do oliva, osso no lugar do creme, e os dois
+acentos tirados do pelo do animal (ocre e ferrugem).
+
+Paleta
+  #0F1C17  verde-tinta, fundo das faixas escuras
+  #16271F  verde-mata, variação para a faixa de comparação
+  #EDE7D9  osso, texto sobre escuro e fundo das faixas claras
+  #C8872E  ocre, pelo
+  #7A3A22  ferrugem, faixa de conservação
+  #1A2B24  texto sobre as faixas claras
+
+Tipografia
+  Anton — títulos e numerais grandes, o peso faz o drama
+  Figtree — corpo, 400 e 600
+
+Elemento memorável
+  A ilustração da onça em SVG atravessando a borda entre o hero e a
+  seção da mordida. É aí que a ousadia foi gasta; o resto é disciplinado,
+  sem sombra, sem gradiente e sem animação de scroll.
+
+Ideia estrutural
+  Faixas de alturas desiguais, cada uma com cor própria. A cor carrega
+  significado: a faixa de conservação é a única em ferrugem, porque é a
+  única seção com má notícia.
