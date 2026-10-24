@@ -3,15 +3,26 @@
 Agente para Claude Code que transforma um formulário de briefing
 preenchido em uma landing page estática pronta para entrega.
 
-Um comando por cliente:
+Serve para cliente real, a partir do formulário preenchido:
 
-```bash
+```
 cria a landing do cliente padaria-sol a partir de clientes/padaria-sol/formulario.pdf
 ```
 
-O agente lê o formulário, escreve o briefing estruturado, escolhe uma
-direção visual, monta a página, chama um subagente revisor e gera as
-instruções de publicação.
+E para projeto seu, a partir de um pedido solto:
+
+```
+faz uma landing page de uma clínica veterinária de bairro
+```
+
+Nos dois casos o agente monta o briefing estruturado, escolhe uma direção
+visual, desenha a página (com ou sem fotos), chama um subagente revisor e
+gera as instruções de publicação.
+
+No modo cliente nada é inventado: campo que o cliente não respondeu
+aparece como `[preencher]` na página. No modo livre o agente inventa a
+marca e o conteúdo, sempre com nome fictício próprio, contato fictício e
+marcação visível de que é demonstração.
 
 ## O que tem aqui
 
@@ -21,7 +32,9 @@ instruções de publicação.
 | `.claude/skills/criar-landing/SKILL.md` | as três fases: formulário → briefing → página |
 | `.claude/skills/criar-landing/checklist-entrega.md` | checklist de qualidade, acessibilidade, SEO e segurança |
 | `.claude/agents/revisor-landing.md` | subagente que revisa sem ter participado da construção |
-| `referencias/direcoes-visuais.md` | seis direções visuais com paleta, tipografia e forma |
+| `referencias/direcoes-visuais.md` | seis direções visuais com ideia estrutural própria, e a lista de tells de IA |
+| `referencias/sem-fotos.md` | como desenhar uma página sem imagem, sem retângulo cinza |
+| `referencias/formulario-cliente.md` | os nove blocos que o cliente preenche |
 | `clientes/exemplo-cafeteria/briefing.md` | formato que o agente gera e consome |
 
 ## Como usar

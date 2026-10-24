@@ -5,16 +5,29 @@ briefing preenchido. Uma pasta por cliente.
 
 ## O ciclo
 
-Um comando por cliente:
+Dois modos de entrada, um comando cada.
+
+**Modo cliente** — negócio real, a partir do formulário preenchido:
 
 ```
 cria a landing do cliente padaria-sol a partir de clientes/padaria-sol/formulario.pdf
 ```
 
-O que acontece: a skill `criar-landing` lê o formulário, escreve o
-`briefing.md`, escolhe uma direção visual, monta o `index.html`, chama o
-subagente `revisor-landing` e gera o `ENTREGA.md`. Você revisa o
-resultado, não o processo.
+**Modo livre** — tema solto, sem cliente:
+
+```
+faz uma landing page de uma clínica veterinária de bairro
+```
+
+O que acontece nos dois: a skill `criar-landing` monta o `briefing.md`
+(lendo o formulário, ou inventando a marca e o conteúdo no modo livre),
+escolhe uma direção visual com a skill `frontend-design`, monta o
+`index.html`, chama o subagente `revisor-landing` e gera o `ENTREGA.md`.
+Você revisa o resultado, não o processo.
+
+A diferença entre os modos é só o que pode ser inventado. Modo cliente
+não inventa nada e usa `[preencher]`; modo livre inventa tudo, com marca
+de invenção própria, contato fictício e marcação de demonstração.
 
 ## Estrutura
 
@@ -32,7 +45,10 @@ clientes/<cliente>/
   DIRECAO.txt         # direção visual usada
   ENTREGA.md          # instruções de publicação para o cliente
 
-referencias/direcoes-visuais.md
+projetos/<nome>/        # modo livre: mesma estrutura, sem formulario.pdf
+                        # fica versionado (marca e conteúdo fictícios)
+
+referencias/{direcoes-visuais.md,sem-fotos.md,formulario-cliente.md}
 .claude/skills/criar-landing/{SKILL.md,checklist-entrega.md}
 .claude/agents/revisor-landing.md
 ```

@@ -4,6 +4,14 @@ Formato que o agente espera. Copie para cada cliente novo e preencha
 com as respostas do formulário. Deixe em branco o que não souber: o
 agente trata vazio como lacuna, não como permissão para inventar.
 
+## 0. Modo
+
+- modo: cliente
+
+`cliente` = negócio real; nada pode ser inventado, campo vazio vira
+`[preencher]`. `livre` = projeto do próprio usuário; o agente inventa a
+marca e o conteúdo, com contato fictício e marcação de demonstração.
+
 ## 1. Negócio
 
 - nome: Grão & Aroma

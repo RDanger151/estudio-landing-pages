@@ -8,32 +8,90 @@ description: Do formulário do cliente até a landing page pronta. Use quando o 
 Três fases, em sequência, numa única sessão. Não pergunte permissão
 entre as fases; apenas execute e relate em uma linha ao final de cada.
 
+Duas entradas servem: o formulário de um cliente real (modo `cliente`,
+pasta `clientes/`) ou um pedido solto do usuário sobre qualquer tema
+(modo `livre`, pasta `projetos/`). O modo muda o que pode ser inventado;
+tudo o mais é igual. Onde este arquivo diz `clientes/<cliente>/`, leia
+`projetos/<nome>/` no modo livre.
+
 Economia: cada arquivo é lido **uma vez**. Não releia o que você acabou
 de escrever, não tire screenshot, não abra navegador, não rode build, não
 imprima o conteúdo dos arquivos no chat. A revisão é do subagente, não
 sua.
 
-## Fase 1 — Formulário → briefing
+## Fase 1 — Entrada → briefing
 
-Entrada possível: PDF, DOCX, texto colado no chat, ou um
-`briefing.md` já preenchido (nesse caso pule para a fase 2).
+### 1.0 Identifique o modo
+
+Duas entradas possíveis. A diferença decide se inventar é proibido ou
+esperado, então classifique antes de qualquer coisa.
+
+**Modo `cliente`** — há um negócio real por trás. Sinais: formulário
+preenchido em PDF, DOCX ou texto; o usuário nomeia um cliente; dados de
+contato reais; pasta em `clientes/`.
+
+**Modo `livre`** — não há cliente real. Sinais: um pedido solto no chat
+("faz uma landing de petshop", "quero um site sobre adoção de animais"),
+um tema sem negócio nomeado, ou o usuário diz que é teste, estudo, demo
+ou portfólio. Pasta em `projetos/`.
+
+Em caso de dúvida, pergunte em uma linha: "isso é para um cliente real ou
+é projeto seu?". Grave a resposta no campo `modo` do briefing.
+
+### 1.1 Modo cliente
 
 1. Leia o formulário uma vez. Em PDF ou DOCX, use `Read` direto.
-2. Escreva `clientes/<cliente>/briefing.md` seguindo exatamente o
-   formato de `clientes/exemplo-cafeteria/briefing.md`: as dez seções,
-   os mesmos nomes de campo.
-3. Campo que o cliente deixou em branco vira `[preencher]`. Nunca
-   complete por dedução, nem o nome do bairro, nem o horário "provável".
+2. Escreva `clientes/<cliente>/briefing.md` no formato de
+   `clientes/exemplo-cafeteria/briefing.md`: as dez seções, os mesmos
+   nomes de campo, `modo: cliente`.
+3. Campo em branco vira `[preencher]`. **Nunca** complete por dedução,
+   nem o bairro, nem o horário "provável", nem o preço de mercado.
 4. Normalize só o que é mecânico:
    - WhatsApp → só dígitos, começando em `55`
    - preços → `R$ 0,00`
    - horários → `Seg a Sex, 8h às 18h`
-5. Imprima no chat **apenas** a lista de campos que ficaram
-   `[preencher]`, uma linha cada. Nada mais.
+5. Imprima no chat **apenas** a lista de campos `[preencher]`, uma linha
+   cada.
 
-Se faltar algo que muda a estrutura da página — nenhum serviço listado,
-nenhum contato, nenhuma seção marcada — pare e pergunte. Lacuna de
-detalhe não interrompe.
+Se faltar algo que muda a estrutura — nenhum serviço, nenhum contato,
+nenhuma seção marcada — pare e pergunte. Lacuna de detalhe não
+interrompe.
+
+### 1.2 Modo livre
+
+Aqui você é o cliente e o redator. Preencha o briefing inteiro,
+inventando o que falta, de forma coerente.
+
+1. A partir do pedido, decida e registre: nome fictício do negócio, ramo,
+   cidade, público, diferencial, tom de voz. Um negócio concreto, não uma
+   categoria — "Pelo & Casco, clínica veterinária de bairro em Olinda",
+   não "petshop genérico".
+2. Escreva `projetos/<nome>/briefing.md` no mesmo formato, com
+   `modo: livre`. Preencha as dez seções: serviços com preços
+   plausíveis, FAQ, história, motivos, horários, formas de pagamento.
+3. Decida o estado das fotos: sem imagens fornecidas, trate como **não
+   vai ter foto** e desenhe sem imagem (fase 2.1), a menos que o usuário
+   diga que vai mandar.
+4. Três regras que valem sempre no modo livre:
+   - **Marca fictícia de invenção própria.** Nunca o nome, logo, cores
+     ou textos de um negócio real existente.
+   - **Contato visivelmente fictício:** `(00) 00000-0000`, endereço
+     `Rua Exemplo, 100`, `@exemplo`. Nunca um telefone, CNPJ ou endereço
+     que possa ser de alguém de verdade.
+   - **Marcar como demonstração:** comentário no topo do HTML e uma
+     linha no `ENTREGA.md` dizendo que a marca e o conteúdo são
+     fictícios.
+5. Imprima no chat, em até cinco linhas, o que você decidiu: nome, ramo,
+   cidade, público e o ângulo da página. Se o usuário tiver pedido algo
+   específico (tom, seções, paleta), confirme que entrou.
+
+Nada de `[preencher]` no modo livre: se você inventou a marca, invente o
+resto também. Pergunte apenas se o pedido for contraditório.
+
+### 1.3 Briefing já pronto
+
+Se o usuário apontar um `briefing.md` já preenchido, leia o campo `modo`
+e vá direto para a fase 2.
 
 ## Fase 2 — Briefing → página
 
@@ -113,8 +171,12 @@ horários.
 
 ### Nunca
 
-- Inventar depoimento, preço, nota, nº de clientes, tempo de mercado,
-  prêmio ou fornecedor. Sem dado → `[preencher: <campo>]` visível.
+- **Modo cliente:** inventar depoimento, preço, nota, nº de clientes,
+  tempo de mercado, prêmio ou fornecedor. Sem dado →
+  `[preencher: <campo>]` visível.
+- **Modo livre:** usar o nome, a marca, as cores ou os textos de um
+  negócio real; pôr contato que possa ser de alguém de verdade; omitir a
+  marcação de que é demonstração.
 - Inventar imagem, ou usar banco de imagens sem autorização escrita no
   briefing. Foto que vem depois → bloco rotulado `[foto: descrição]`;
   cliente que não quer foto → página desenhada sem imagem (2.1).

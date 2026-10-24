@@ -5,6 +5,11 @@ clientes/*
 !clientes/exemplo-cafeteria/
 !clientes/exemplo-cafeteria/briefing.md
 
+# projetos/ (modo livre) fica versionado: marca e conteúdo são fictícios,
+# sem dado de ninguém. Serve de portfólio e de teste do agente.
+# Imagens pesadas, se houver, ficam de fora.
+projetos/**/assets/
+
 # Acessos e segredos
 .env
 .env.*

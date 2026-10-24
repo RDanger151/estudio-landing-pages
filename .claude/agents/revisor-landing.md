@@ -26,14 +26,25 @@ build.
 
 ## Trabalho
 
+Leia primeiro o campo `modo` do briefing. Ele muda o que é defeito:
+
+- **`modo: cliente`** — negócio real. Qualquer dado no HTML que não
+  esteja no briefing é invenção, e é bloqueante.
+- **`modo: livre`** — projeto fictício. Invenção é esperada e não é
+  defeito. Em vez disso, verifique as três regras do modo livre:
+  marca de invenção própria (não a de um negócio real existente),
+  contato visivelmente fictício (`(00) 00000-0000`, `Rua Exemplo`,
+  `@exemplo`) e marcação de demonstração no comentário do HTML e no
+  `ENTREGA.md`. Falha em qualquer uma é bloqueante.
+
 Compare o HTML contra o checklist, item por item, e contra o briefing,
 campo por campo. Procure especificamente por:
 
-- Dado que está no HTML mas não está no briefing (invenção)
 - Dado que está no briefing mas não chegou ao HTML (omissão)
 - Número de WhatsApp diferente do briefing, ou sem o 55, ou com
   caractere que não seja dígito
-- Marcador `[preencher]` que não esteja listado no `ENTREGA.md`
+- Marcador `[preencher]` que não esteja listado no `ENTREGA.md` (no modo
+  livre, qualquer `[preencher]` é defeito: ali nada fica em aberto)
 - `alt` ausente, vazio sem ser decorativo, ou genérico ("imagem")
 - Link externo sem `rel="noopener noreferrer"`
 - Script de terceiro que o briefing não autorizou
